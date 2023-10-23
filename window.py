@@ -10,10 +10,10 @@ def clicked():
     model = keras.models.load_model(r'C:\Users\owlwi\PycharmProjects\image_recognition\image_recognition.h5')
     image_path = filedialog.askopenfilename()
     image = Image.open(image_path)
-    image = image.resize((64, 64))  # Убедитесь, что размер соответствует ожидаемому размеру модели
+    image = image.resize((64, 64))  # Нужный размер
     image = image.convert('RGB')
     image = np.array(image, dtype=np.float32) / 255.0
-    image = np.expand_dims(image, axis=0)  # Добавьте размерность для батча
+    image = np.expand_dims(image, axis=0)  # Добавляем размерность для батча
 
     # Классификация изображения
     predictions = model.predict(image)
