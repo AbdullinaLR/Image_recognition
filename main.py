@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-# Путь к вашему каталогу с изображениями
+# Путь к каталогу с изображениями
 image_dir = r"C:\Users\owlwi\OneDrive\Документы\сова\учеба\ии\medication"
 
 # Желаемый размер изображения
